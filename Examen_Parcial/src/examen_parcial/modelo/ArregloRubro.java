@@ -11,29 +11,33 @@ package examen_parcial.modelo;
 public class ArregloRubro {
 
     private int indice;
-    private Rubro[] rubros;
+    private final Rubro[] rubros;
 
     public ArregloRubro(int indice, Rubro[] rubros) {
         this.indice = indice;
         this.rubros = rubros;
     }
 
-    public ArregloRubro(Rubro[] rubros) {
-        this.rubros = rubros;
+    public ArregloRubro(int tamano) {
+        this.indice = 0;
+        this.rubros = new Rubro[tamano];
     }
 
     public boolean agregar(Rubro rubro) {
-        boolean insertado = false;
-        for (int i = 0; i < rubros.length; i++) {
-            if (rubros[i] == null) {
-                rubros[i] = rubro;
-                insertado = true;
-                break;
-            }
+        if (indice < rubros.length) { 
+            rubros[indice] = rubro;
+            indice++;  
+            return true;  
         }
-        return insertado;
+        return false;  
     }
 
-    public boolean buscar(String nombreRubro)
-        
+    public boolean buscar(String nombreRubro){
+        for (int i = 0; i < indice; i++) {  
+            if (rubros[i].getNombre().equalsIgnoreCase(nombreRubro)) {  
+                return true;  
+            }
+        }
+        return false; 
     }
+}

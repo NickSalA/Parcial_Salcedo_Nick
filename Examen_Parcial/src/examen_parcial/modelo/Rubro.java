@@ -10,27 +10,29 @@ package examen_parcial.modelo;
  */
 public class Rubro {
 
-    private final String nombre;
+    private String nombre;
     private boolean estado;
 
-    public Rubro(String nombre, boolean estado) {
+    public Rubro(String nombre) {
         this.nombre = nombre;
-        this.estado = estado;
+        this.estado = true;
     }
 
     public boolean habilitar() {
-        return estado = true;
+        this.estado = true;
+        return estado;
     }
 
     public boolean deshabilitar() {
-        return estado = false;
+        this.estado = false;
+        return estado;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public boolean isEstado() {
-        return estado;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }
