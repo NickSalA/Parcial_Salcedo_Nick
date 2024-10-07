@@ -35,19 +35,4 @@ public class Contacto {
     public String getPuesto() {
         return puesto;
     }
-    public void setDNI(String DNI) {
-        this.DNI = DNI;
-    }
-
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
-    public void setPuesto(String puesto) {
-        this.puesto = puesto;
-    }
 }
