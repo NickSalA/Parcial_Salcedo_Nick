@@ -20,12 +20,17 @@ public class Requisito {
         this.estado = true;
     }
 
-    public boolean habilitar(){
-       this.estado = true;
-       return estado;
+    public boolean habilitar() {
+        this.estado = true;
+        return estado;
     }
-    public boolean deshabilitar(){
+
+    public boolean deshabilitar() {
         this.estado = false;
         return estado;
+    }
+
+    public int getOrden() {
+        return orden;
     }
 }

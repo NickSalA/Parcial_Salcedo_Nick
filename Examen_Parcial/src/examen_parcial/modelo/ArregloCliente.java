@@ -9,5 +9,5 @@ package examen_parcial.modelo;
  * @author Nick Emanuel Salcedo Alfaro
  */
 public class ArregloCliente {
-    
+    (i)
 }

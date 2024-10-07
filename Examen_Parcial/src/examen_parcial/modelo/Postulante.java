@@ -9,5 +9,12 @@ package examen_parcial.modelo;
  * @author Nick Emanuel Salcedo Alfaro
  */
 public class Postulante {
+    private String DNI;
+    private String email;
+    private String nombres;
+    private String apellidos;
+    private String direccion;
+    private String fechaNacimiento;
     
+        
 }
